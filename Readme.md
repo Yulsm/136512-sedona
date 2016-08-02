@@ -1,7 +1,7 @@
 ﻿# Личный проект «Седона»
 
 * Студент: [Юлия Смирнова](https://up.htmlacademy.ru/htmlcss/14/user/136512).
-* Наставник: [Николай Пойманов](https://https://up.htmlacademy.ru/htmlcss/14/user/23280).
+* Наставник: [Николай Пойманов] (https://htmlacademy.ru/profile/id23280).
 
 ---
 
