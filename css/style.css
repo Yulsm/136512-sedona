@@ -1,0 +1,22 @@
+body {
+    width: 1200px;
+    font-family: "PT Sans", "Arial", serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 26px;
+    text-transform: uppercase; 
+    color: #000;
+}
+
+h1, h2 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.feature-block {
+    color: #fff;
+}
+
+.choice-block {
+    color: #fff;
+}
