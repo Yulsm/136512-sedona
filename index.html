@@ -3,6 +3,7 @@
     <head>
         <title>Седона заслуживает большего</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -42,13 +43,13 @@
                     </div>    
                 </section>
                 <section class="feature-block">
-                    <div class="city-description">
-                        <h2>Настоящий городок</h2>
-                        <p>№1</p>
+                    <div class="feature-description">
+                        <h2>Настоящий <br> городок</h2>
+                        <span class="number">№1</span>
                         <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
                     </div>
-                    <div class="city-image">
-                        <img src="img/sedona-city.jpg" alt="Sedona" width="800" height="255">
+                    <div class="feature-image">
+                        <img src="img/sedona-city.jpg" alt="Sedona" width="800" height="256">
                     </div>
                 </section>
                 
@@ -71,12 +72,12 @@
                 </section>
                 
                 <section class="feature-block">
-                    <div class="bridge-image">
+                    <div class="feature-image">
                         <img src="img/sedona-bridge.jpg" alt="Мост Дьявола" width="800" height="255">
                     </div>
-                    <div class="bridge-description">
-                        <h2>Там есть мост дьявола</h2>  
-                        <p>№2</p>
+                    <div class="feature-description">
+                        <h2>Там есть <br> мост дьявола</h2>  
+                        <span class="number">№2</span>
                         <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
                     </div>
                 </section>
@@ -84,48 +85,51 @@
                 <section class="columns-block-2">
                     <div class="square block">
                         <h2>Небольшая <br> площадь</h2>
-                        <p>№3</p>
+                        <span class="line">№3</span>
                         <p>Все достопримечательности находятся очень близко</p>
                     </div>
                     <div class="road block">
                         <h2>Красивая <br> дорога</h2>
-                        <p>№4</p>
+                        <span class="line">№4</span>
                         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
                     <div class="tourists block">
                         <h2>Мало <br> туристов</h2>
-                        <p>№5</p>
+                        <span class="line">№5</span>
                         <p>Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </section>
                 <section class="selection-block">
                     <div class="suggestion-block">
                         <span>Заинтересовались?</span>
-                        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                     </div>
                     <div class="choice-block">
                         <p>Поиск гостиницы в Седоне</p>
                     </div>
-                    <form method="get" action="#" name="hotel-search">
+                    <form method="get" action="#" name="hotel-search" class="hotel-search">
                         <div class="line-1">
                             <label for="check-in">Дата заезда:</label>
-                            <input type="date" name="check-in" id="check-in">
+                            <input class="check" type="date" name="check-in" id="check-in">
+                            <div class="calendar"></div>
                         </div>
                         <div class="line-2">
                             <label for="check-out">Дата выезда:</label>
-                            <input type="date" name="check-out" id="check-out">
+                            <input class="check" type="date" name="check-out" id="check-out">
                         </div>
                         <div class="line-3">
                             <label for="adult">Взрослые:</label>
-                            <button type="button">-</button>
-                            <input type="text" name="adult" id="adult">
-                            <button type="button">+</button>
-                            <label for="kids">Дети:</label>
-                            <button type="button">-</button>
-                            <input type="text" name="kids" id="kids">
-                            <button type="button">+</button>
+                            <button type="button" class="grey-btn">-</button>
+                            <input type="text" name="adult" id="adult" placeholder="2">
+                            <button type="button" class="grey-btn">+</button>
                         </div>
-                        <button type="submit">Найти</button>
+                        <div class="line-4">
+                            <label for="kids">Дети:</label>
+                            <button type="button" class="grey-btn">-</button>
+                            <input type="text" name="kids" id="kids" placeholder="0">
+                            <button type="button" class="grey-btn">+</button>
+                        </div>
+                        <button class="btn" type="submit">Найти</button>
                     </form>
                     <div class="map">
                         <script></script>    
@@ -133,17 +137,18 @@
                 </section>
             </main>
             <footer class="page-footer">
-                    <div class="footcolumn-1">
-                        <a href="#">#visitsedona</a> 
-                    </div>
-                    <div class="footcolumn-2">
-                        <a class="social-btn social-btn-tw" href="#">Twitter</a>
-                        <a class="social-btn social-btn-fb" href="#">Facebook</a>
-                        <a class="social-btn social-btn-yt" href="#">Youtube</a>
-                    </div>
-                    <div class="footcolumn-3">
-                        Website by <a href="https://htmlacademy.ru"><img src="academylogo.png" alt="html academy" width="50" height="25"></a> 
-                    </div>
+                <div class="footcolumn-1">
+                    <a href="#">#visitsedona</a> 
+                </div>
+                <div class="footcolumn-2">
+                    <a class="social-btn social-btn-tw" href="#"> </a>
+                    <a class="social-btn social-btn-fb" href="#"></a>
+                    <a class="social-btn social-btn-yt" href="#"></a>
+                </div>
+                <div class="footcolumn-3">
+                    <p>Website by</p> 
+                   <!-- <a href="https://htmlacademy.ru"><img src="img/academylogo.png" alt="html academy" width="114" height="40"></a> -->
+                </div>
             </footer>
         </div>    
     </body>

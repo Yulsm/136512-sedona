@@ -3,30 +3,31 @@
     <head>
         <title>Выбор отеля в Седоне</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
         <link rel="stylesheet" href="css/style.css">
     </head>
-        <body>
-            <div class="container">
+    <body class="inner">
+        <div class="container clearfix">
             <header class="main-header">
-                    <nav class="main-menu">
-                        <ul class="nav-list">
-                            <li class="nav-left">
-                                <a class="nav-link" href="#">Информация</a> 
-                            </li>
-                            <li class="nav-left">
-                                <a class="nav-link" href="#">Фото и видео</a>
-                            </li>
-                            <li class="nav-right">
-                                <a class="nav-link" href="#">Карта штата</a> 
-                            </li>
-                            <li class="nav-right">
-                                <a class="nav-link" href="#">Гостиницы</a> 
-                            </li>             
-                        </ul>  
-                    </nav>
-                    <div class="logo">
-                        <a href="index.html" class="logo-link"><img src="img/sedona-logo.png"></a> 
-                    </div>
+                <nav class="main-menu">
+                    <ul class="nav-list">
+                        <li class="nav-left">
+                            <a class="nav-link" href="#">Информация</a> 
+                        </li>
+                        <li class="nav-left">
+                            <a class="nav-link" href="#">Фото и видео</a>
+                        </li>
+                        <li class="nav-right">
+                            <a class="nav-link" href="#">Карта штата</a> 
+                        </li>
+                        <li class="nav-right">
+                            <a class="nav-link active" href="#">Гостиницы</a> 
+                        </li>             
+                    </ul>  
+                </nav>
+                <div class="logo">
+                    <a href="index.html" class="logo-link"><img src="img/sedona-logo.png"></a> 
+                </div>
             </header>
             <main>
                 <div class="hotel-selection">
@@ -62,30 +63,41 @@
                             </div>
                         </div>
                         <div class="hotel-cost">
-                            <label for="money">Стоимость в сутки (Р): </label>
-                            <input type="text" name="minprice" id="minprice" placeholder="От 0">
-                            <input type="text" name="maxprice" id="maxprice" placeholder="До 3000">
-                            <input type="range" name="money" id="money" min="0" max="3000" step="10">
-                            <button type="submit">Показать</button>
+                            <div class="filter-title">Стоимость в сутки (Р):</div>
+                            
+                            <div class="price-controls">
+                                <label class="min-price">От <input type="text" name="min-price" value="0"> </label>
+                                <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
+                            </div>
+                            
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="bar"></div>
+                                </div>
+                                <div class="range-toggle range-toggle-min"></div>
+                                <div class="range-toggle range-toggle-max"></div>
+                            </div>
+                            
+                            <button class="btn-transparent" type="submit">Показать</button>
                         </div>
                     </form>
                 </div>
-                
+
                 <div class="results">
                     <div class="range">
-                        <span>Найдено: 3</span>
-                        <span>Сортировка</span>
+                        <span class="amount">Найдено: 3</span>
+                        <p class="sort">Сортировка:</p>
                     </div>
                     <div class="range-options">
                         <ul class="range-list">
-                            <li>По цене</li>
+                            <li class="active">По цене</li>
                             <li><a href="#">По типу</a></li>
                             <li><a href="#">По рейтингу</a></li>
                         </ul>
                     </div>
                     <div class="range-buttons">
-                        <a href="#"><img src="img/triangle.png"></a>
-                        <a href="#"><img src="img/tr2.png"></a>
+                        <a href="#" class="range-btn triangle-1"></a>
+                        <a href="#" class="range-btn triangle-2"></a>
                     </div>
                 </div>                   
                 <section class="hotels">
@@ -96,12 +108,12 @@
                         <div class="hotel-info">
                             <h2>Amara resort & Spa</h2>
                             <div class="hotel-details">
-                                <p>Гостиница </p>
+                                <span>Гостиница </span>
                                 <a class="more" href="#">Подробнее</a>
                             </div>
                             <div class="hotel-reserve">
-                            <p>от 3500 р.</p>
-                            <a class="book">Забронировать</a>
+                            <span>от 3500 р.</span>
+                            <a href="#" class="book">Забронировать</a>
                             </div>
                         </div>
                          <div class="hotel-stars">
@@ -110,7 +122,7 @@
                             <span>Рейтинг 8,5 </span>
                         </div>
                     </article>
-                    
+
                     <article class="hotel hotel-2">
                         <div class="hotel-image">
                             <img src="img/hotel-2.jpg" alt="Desert quail inn" width="135" height="90">
@@ -118,12 +130,12 @@
                         <div class="hotel-info">
                             <h2>Desert quail inn</h2>
                             <div class="hotel-details">
-                                <p>Мотель </p>
+                                <span>Мотель </span>
                                 <a class="more" href="#">Подробнее</a>
                             </div>
                             <div class="hotel-reserve">
-                            <p>от 2000 р.</p>
-                            <a class="book">Забронировать</a>
+                            <span>от 2000 р.</span>
+                            <a href="#" class="book">Забронировать</a>
                             </div>
                         </div>
                          <div class="hotel-stars">
@@ -132,7 +144,7 @@
                             <span>Рейтинг 8,9 </span>
                         </div>
                     </article>
-                    
+
                     <article class="hotel hotel-3">
                         <div class="hotel-image">
                             <img src="img/hotel-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
@@ -140,12 +152,12 @@
                         <div class="hotel-info">
                             <h2>Villas at Poco Diablo</h2>
                             <div class="hotel-details">
-                                <p>Апартаменты </p>
+                                <span>Апартаменты </span>
                                 <a class="more" href="#">Подробнее</a>
                             </div>
                             <div class="hotel-reserve">
-                            <p>от 4000 р.</p>
-                            <a class="book">Забронировать</a>
+                            <span>от 4000 р.</span>
+                            <a href="#" class="book">Забронировать</a>
                             </div>
                         </div>                        
                         <div class="hotel-stars">
@@ -161,12 +173,12 @@
                     <a href="#">#visitsedona</a> 
                 </div>
                 <div class="footcolumn-2">
-                    <a class="social-btn social-btn-tw" href="#">Twitter</a>
-                    <a class="social-btn social-btn-fb" href="#">Facebook</a>
-                    <a class="social-btn social-btn-yt" href="#">Youtube</a>
+                    <a class="social-btn social-btn-tw" href="#"> </a>
+                    <a class="social-btn social-btn-fb" href="#"></a>
+                    <a class="social-btn social-btn-yt" href="#"></a>
                 </div>
                 <div class="footcolumn-3">
-                    Website by <a href="https://htmlacademy.ru"><img src="academylogo.png" alt="html academy" width="50" height="25"></a> 
+                    <p>Website by</p> 
                 </div>
             </footer>
         </div>
