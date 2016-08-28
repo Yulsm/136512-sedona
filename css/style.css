@@ -116,7 +116,7 @@ h1, h2 {
 .intro {
     width: 1200px;
     height: 620px;
-    background: #b56868 url("img/sedona-background.jpg") no-repeat;     
+    background: #b56868 url("../img/sedona-background.jpg") no-repeat;     
     padding-top: 75px;
 }
 
@@ -131,7 +131,7 @@ h1, h2 {
 .head-back {
     float: left;
     width: 100%;   
-    background: url("img/white-part.png") no-repeat;
+    background: url("../img/white-part.png") no-repeat;
     min-height: 273px;
 }
 
@@ -376,19 +376,19 @@ h1, h2 {
 }
 
 .hotel-search input.check {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 307px -114px;
 }
 
 .hotel-search input.check:hover {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 307px -197px;
 }
 
 .hotel-search input.check:active {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 307px -154px;
 }
@@ -571,7 +571,7 @@ h1, h2 {
     position: absolute;
     top: 5px;
     right: 20px;
-    background-image: url("img/sprite-2.png");
+    background-image: url("../img/sprite-2.png");
     background-repeat: no-repeat;
     background-position: -10px -10px;
     width: 114px;
@@ -579,13 +579,13 @@ h1, h2 {
 }
 
 .footcolumn-3 p:hover::after {
-    background-image: url("img/sprite-2.png");
+    background-image: url("../img/sprite-2.png");
     background-repeat: no-repeat;
     background-position: -10px -69px;    
 }
 
 .footcolumn-3 p:active::after {
-    background-image: url("img/sprite-2.png");
+    background-image: url("../img/sprite-2.png");
     background-repeat: no-repeat;
     background-position: -10px -128px;    
 }
@@ -609,38 +609,38 @@ h1, h2 {
 }
 
 .social-btn-tw {   
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 5px -656px;    
 }
 
 .social-btn-tw:active {  
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 5px -691px;   
    
 }
 
 .social-btn-fb {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 8px -360px;
 }
 
 .social-btn-fb:active {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 8px -399px;
 }
 
 .social-btn-yt {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 3px -726px;    
 }
 
 .social-btn-yt:active {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 3px -762px;    
 }
@@ -649,7 +649,7 @@ h1, h2 {
     float: left;
     width: 1200px;  
     height: 190px;
-    background: #65a5ea url("img/filter-background.jpg") no-repeat;
+    background: #65a5ea url("../img/filter-background.jpg") no-repeat;
     color: #fff;
     padding-top: 27px;    
 }
@@ -813,7 +813,7 @@ input[type="checkbox"] + label {
 input[type="checkbox"] + label::before {
     content: "";
     position: absolute;
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 22px;
     height: 22px;
@@ -825,7 +825,7 @@ input[type="checkbox"] + label::before {
 input[type="checkbox"]:checked + label::after {
     content: "";
     position: absolute;
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     width: 26px;
     height: 22px;
@@ -926,13 +926,13 @@ input[type="checkbox"]:checked + label::after {
 }
 
 .triangle-2 {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: 1px -274px;   
 }
 
 .triangle-1 {
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: -13px -302px;        
 }
@@ -1048,7 +1048,7 @@ input[type="checkbox"]:checked + label::after {
     height: 20px;
     top: 30px;
     right: 73px;
-    background-image: url("img/sprite.png");
+    background-image: url("../img/sprite.png");
     background-repeat: no-repeat;   
 }
 
