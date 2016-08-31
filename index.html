@@ -104,7 +104,9 @@
                     </div>
                 </section>
                 <div class="map">
-                    <script></script> 
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d704785.7032253882!2d-112.01473641743773!3d34.856995571388275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1472684898983" width="100%" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    
+                    
                     <form method="get" action="#" name="hotel-search" class="hotel-search">
                         <div class="line-1">
                             <label for="check-in">Дата заезда:</label>
@@ -145,6 +147,42 @@
                     <a href="https://htmlacademy.ru" class="academylogo"></a>
                 </div>
             </footer>
-        </div>    
+        </div> 
+        <script>
+            var button = document.querySelector(".choice-block");
+            var popup = document.querySelector(".hotel-search");
+            var close = document.querySelector(".choice-block");
+            var form = popup.querySelector("form");
+            var checkin = popup.querySelector("[name=check-in]");
+            var checkout = popup.querySelector("[name=check-out]");
+            /*var mapOpen = document.querySelector(".map");*/            
+            
+            button.addEventListener("click", function(event) {
+                event.preventDefault();
+                popup.classList.add("modal-content-show");
+                checkin.focus();
+            });
+            
+            form.addEventListener("submit", function(event) {
+                if (!checkin.value || !checkout.value) {
+                    event.preventDefault();
+                }
+            });
+            
+            close.addEventListener("click", function(event) {
+                if (popup.classList.contains("modal-content-show")) {
+                    event.preventDefault();
+                    popup.classList.remove("modal-content-show");
+                }                
+            });       
+            
+            window.addEventListener("keydown", function(event) {
+                if (event.keyCode === 27) {
+                    if (popup.classList.contains("modal-content-show")) {
+                        popup.classList.remove("modal-content-show");
+                    }
+                }
+            });        
+        </script>
     </body>
 </html>
