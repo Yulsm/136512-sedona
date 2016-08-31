@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css"> 
     </head>
     <body class="inner">
         <div class="container clearfix">
@@ -26,7 +27,7 @@
                     </ul>  
                 </nav>
                 <div class="logo">
-                    <a href="index.html" class="logo-link"><img src="img/sedona-logo.png"></a> 
+                    <a href="index.html" class="logo-link"><img src="img/sedona-logo.png" alt="Logo"></a> 
                 </div>
             </header>
             <main>
@@ -43,7 +44,7 @@
                                 <label for="parking">Парковка</label>
                             </div>
                             <div class="option">
-                                <input type="checkbox" name="wifi" id="wifi">
+                                <input type="checkbox" name="wifi" id="wifi" disabled>
                                 <label for="wifi">Wi-fi</label>
                             </div>
                         </div>
@@ -58,7 +59,7 @@
                                 <label for="motel">Мотель</label>
                             </div>
                             <div class="option">
-                                <input type="checkbox" name="apartments" id="apartments" checked>
+                                <input type="checkbox" name="apartments" id="apartments" checked disabled>
                                 <label for="apartments">Апартаменты</label>
                             </div>
                         </div>
@@ -69,7 +70,6 @@
                                 <label class="min-price">От <input type="text" name="min-price" value="0"> </label>
                                 <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
                             </div>
-                            
                             <div class="range-controls">
                                 <div class="scale">
                                     <div class="bar"></div>
@@ -77,12 +77,10 @@
                                 <div class="range-toggle range-toggle-min"></div>
                                 <div class="range-toggle range-toggle-max"></div>
                             </div>
-                            
                             <button class="btn-transparent" type="submit">Показать</button>
                         </div>
                     </form>
                 </div>
-
                 <div class="results">
                     <div class="range">
                         <span class="amount">Найдено: 3</span>
@@ -96,7 +94,7 @@
                         </ul>
                     </div>
                     <div class="range-buttons">
-                        <a href="#" class="range-btn triangle-1"></a>
+                        <a href="#" class="range-btn triangle-1 active"></a>
                         <a href="#" class="range-btn triangle-2"></a>
                     </div>
                 </div>                   
@@ -122,7 +120,6 @@
                             <span>Рейтинг 8,5 </span>
                         </div>
                     </article>
-
                     <article class="hotel hotel-2">
                         <div class="hotel-image">
                             <img src="img/hotel-2.jpg" alt="Desert quail inn" width="135" height="90">
@@ -144,7 +141,6 @@
                             <span>Рейтинг 8,9 </span>
                         </div>
                     </article>
-
                     <article class="hotel hotel-3">
                         <div class="hotel-image">
                             <img src="img/hotel-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
@@ -177,8 +173,9 @@
                     <a class="social-btn social-btn-fb" href="#"></a>
                     <a class="social-btn social-btn-yt" href="#"></a>
                 </div>
-                <div class="footcolumn-3">
-                    <p>Website by</p> 
+                 <div class="footcolumn-3">
+                    <span>Website by</span> 
+                    <a href="https://htmlacademy.ru" class="academylogo"></a>
                 </div>
             </footer>
         </div>

@@ -5,41 +5,39 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css"> 
     </head>
-    <body>
+    <body class="index">
         <div class="container clearfix">
             <header class="main-header">
-                    <nav class="main-menu">
-                        <ul class="nav-list">
-                            <li class="nav-left">
-                                <a class="nav-link" href="#">Информация</a> 
-                            </li>
-                            <li class="nav-left">
-                                <a class="nav-link" href="#">Фото и видео</a>
-                            </li>
-                            <li class="nav-right">
-                                <a class="nav-link" href="#">Карта штата</a> 
-                            </li>
-                            <li class="nav-right">
-                                <a class="nav-link" href="inner.html">Гостиницы</a> 
-                            </li>             
-                        </ul>  
-                    </nav>
-                    <div class="logo">
-                        <a href="index.html" class="logo-link"><img src="../136512-sedona/img/sedona-logo.png"></a> 
-                    </div>
-
+                <nav class="main-menu">
+                    <ul class="nav-list">
+                        <li class="nav-left">
+                            <a class="nav-link" href="#">Информация</a> 
+                        </li>
+                        <li class="nav-left">
+                            <a class="nav-link" href="#">Фото и видео</a>
+                        </li>
+                        <li class="nav-right">
+                            <a class="nav-link" href="#">Карта штата</a> 
+                        </li>
+                        <li class="nav-right">
+                            <a class="nav-link" href="inner.html">Гостиницы</a> 
+                        </li>             
+                    </ul>  
+                </nav>
+                <div class="logo">
+                    <a href="index.html" class="logo-link"><img src="../136512-sedona/img/sedona-logo.png" alt="Logo"></a> 
+                </div>
             </header>
             <main>
                 <section class="intro">
                     <div class="headline"> 
                         <img src="img/fonts.png" alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!" width="460" height="350">
                     </div>
-                    <div class="head-back">
-                        <div class="head-lead">
-                            <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-                            <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-                        </div>
+                    <div class="head-lead">
+                        <h1>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+                        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
                     </div>    
                 </section>
                 <section class="feature-block">
@@ -49,31 +47,29 @@
                         <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
                     </div>
                     <div class="feature-image">
-                        <img src="img/sedona-city.jpg" alt="Sedona" width="800" height="256">
+                        <img src="img/cityimg.jpg" alt="Sedona" width="800" height="256">
                     </div>
                 </section>
-                
                 <section class="columns-block-1">
                     <div class="house column">
-                        <img src="img/house.png">
+                        <img src="img/house.png" alt="House" >
                         <h2>Жилье</h2>
                         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                     </div>
                     <div class="food column">
-                        <img src="img/burger.png">
+                        <img src="img/burger.png" alt="Food">
                         <h2>Еда</h2>
                         <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                     </div>
                     <div class="souvenirs column">
-                        <img src="img/gift.png">
+                        <img src="img/gift.png" alt="Souvenirs">
                         <h2>Сувениры</h2>
                         <p>Не только китайского, но и местного производства</p>
                     </div>
                 </section>
-                
                 <section class="feature-block">
                     <div class="feature-image">
-                        <img src="img/sedona-bridge.jpg" alt="Мост Дьявола" width="800" height="255">
+                        <img src="img/bridgeimg.jpg" alt="Devil's bridge" width="800" height="256">
                     </div>
                     <div class="feature-description">
                         <h2>Там есть <br> мост дьявола</h2>  
@@ -81,21 +77,20 @@
                         <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
                     </div>
                 </section>
-                
                 <section class="columns-block-2">
                     <div class="square block">
                         <h2>Небольшая <br> площадь</h2>
-                        <span class="line">№3</span>
+                        <span class="dash">№3</span>
                         <p>Все достопримечательности находятся очень близко</p>
                     </div>
                     <div class="road block">
                         <h2>Красивая <br> дорога</h2>
-                        <span class="line">№4</span>
+                        <span class="dash">№4</span>
                         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
                     <div class="tourists block">
                         <h2>Мало <br> туристов</h2>
-                        <span class="line">№5</span>
+                        <span class="dash">№5</span>
                         <p>Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </section>
@@ -107,36 +102,36 @@
                     <div class="choice-block">
                         <p>Поиск гостиницы в Седоне</p>
                     </div>
+                </section>
+                <div class="map">
+                    <script></script> 
                     <form method="get" action="#" name="hotel-search" class="hotel-search">
                         <div class="line-1">
                             <label for="check-in">Дата заезда:</label>
-                            <input class="check" type="date" name="check-in" id="check-in">
+                            <input class="check" type="text" name="check-in" id="check-in" placeholder="24 апреля 2016">
                             <div class="calendar"></div>
                         </div>
                         <div class="line-2">
                             <label for="check-out">Дата выезда:</label>
-                            <input class="check" type="date" name="check-out" id="check-out">
+                            <input class="check" type="text" name="check-out" id="check-out" placeholder="4 июля 2016">
                         </div>
                         <div class="line-3">
                             <label for="adult">Взрослые:</label>
-                            <button type="button" class="grey-btn">-</button>
+                            <button type="button" class="grey-btn icon-minus"></button>
                             <input type="text" name="adult" id="adult" placeholder="2">
-                            <button type="button" class="grey-btn">+</button>
+                            <button type="button" class="grey-btn icon-plus"></button>
                         </div>
                         <div class="line-4">
                             <label for="kids">Дети:</label>
-                            <button type="button" class="grey-btn">-</button>
+                            <button type="button" class="grey-btn icon-minus"></button>
                             <input type="text" name="kids" id="kids" placeholder="0">
-                            <button type="button" class="grey-btn">+</button>
+                            <button type="button" class="grey-btn icon-plus"></button>
                         </div>
                         <button class="btn" type="submit">Найти</button>
                     </form>
-                    <div class="map">
-                        <script></script>    
-                    </div>
-                </section>
+                </div>
             </main>
-            <footer class="page-footer">
+            <footer class="page-footer main-footer">
                 <div class="footcolumn-1">
                     <a href="#">#visitsedona</a> 
                 </div>
@@ -146,8 +141,8 @@
                     <a class="social-btn social-btn-yt" href="#"></a>
                 </div>
                 <div class="footcolumn-3">
-                    <p>Website by</p> 
-                   <!-- <a href="https://htmlacademy.ru"><img src="img/academylogo.png" alt="html academy" width="114" height="40"></a> -->
+                    <span>Website by</span> 
+                    <a href="https://htmlacademy.ru" class="academylogo"></a>
                 </div>
             </footer>
         </div>    

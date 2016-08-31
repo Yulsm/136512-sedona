@@ -8,9 +8,47 @@ body {
     line-height: 26px;
     text-transform: uppercase; 
     color: #000;
-    min-height: 3000px;
     background-color: #f2f2f2;
 }
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-up-dir::before { content: "\25b2"; } /* "▲" */
+.icon-down-dir::before { content: "\25bc"; } /* "▼" */
+.icon-star::before { content: "\2605"; } /* "★" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-calendar::before { content: "\e800"; } /* "" */
+.icon-plus::before { content: "\e801"; } /* "" */
+.icon-minus::before { content: "\e802"; } /* "" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
 
 h1, h2 {
     font-size: 21px;
@@ -34,13 +72,14 @@ h1, h2 {
     padding: 0;
     box-shadow: 1px 0px 21px 1px #666666;
     background-color: #fff;
+    position: relative;
 }
 
 .main-header {
     position: relative;
     width: 1200px;
     height: 56px;
-    background-color: #fff;    
+    background-color: #fff;   
 }
 
 .logo {
@@ -116,8 +155,8 @@ h1, h2 {
 .intro {
     width: 1200px;
     height: 620px;
-    background: #b56868 url("../img/sedona-background.jpg") no-repeat;     
-    padding-top: 75px;
+    background: #b56868 url("../img/sedona-background.jpg") no-repeat 50% 50%;
+    padding-top: 76px;
 }
 
 .headline {
@@ -125,21 +164,21 @@ h1, h2 {
     width: 460px;
     height: 350px;
     margin-left: 370px;
-    margin-right: 370px;    
+    margin-right: 370px;  
+    margin-bottom: 25px;
 }
 
-.head-back {
+.head-lead {
     float: left;
     width: 100%;   
     background: url("../img/white-part.png") no-repeat;
-    min-height: 273px;
+    text-align: center;
+    padding-top: 100px;
 }
 
-.head-lead {    
-    width: 575px;
-    text-align: center;
-    margin-left: 310px;   
-    margin-top: 120px;
+.head-lead p {
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .feature-block {
@@ -148,13 +187,14 @@ h1, h2 {
     float: left;
     margin: 0;
     background-color: #81b3d2;
+    text-align: center;
 }
 
 .feature-image {
     float: left;
     width: 800px;
     height: 256px;
-    background-color: crimson;
+    background-color: #3CB371;
 }
 
 .feature-description {
@@ -165,7 +205,7 @@ h1, h2 {
     padding-top: 50px;
     padding-bottom: 30px;
     padding-left: 58px;
-    padding-right: 58px;    
+    padding-right: 58px;  
 }
 
 .feature-block h2 {
@@ -193,7 +233,7 @@ h1, h2 {
     background-color: #fff;
     position: absolute;
     left: -15px;
-    top: 9px;
+    top: 12px;
 }
 
 .number::after {
@@ -205,7 +245,7 @@ h1, h2 {
     background-color: #fff;
     position: absolute;
     left: 25px;
-    top: 9px;
+    top: 12px;
 }
 
 .columns-block-1 {
@@ -215,9 +255,8 @@ h1, h2 {
 
 .column {
     float: left;
-    width: 320px;
     text-align: center;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
     padding-top: 60px;    
 }
 
@@ -226,7 +265,6 @@ h1, h2 {
     padding-left: 70px;
     padding-right: 70px;   
 }
-
 
 .food {
     padding-left: 55px;
@@ -244,7 +282,6 @@ h1, h2 {
 .columns-block-2 {
     float: left;
     width: 1200px;
-    height: 256px;    
     background-color: #eee;   
 }
 
@@ -282,11 +319,11 @@ h1, h2 {
     width: 270px;
 }
 
-.line {
+.dash {
     position: relative;
 }
 
-.line::before {
+.dash::before {
     content: "";
     display: table;
     clear: both;
@@ -298,7 +335,7 @@ h1, h2 {
     top: 9px;
 }
 
-.line::after {
+.dash::after {
     content: "";
     display: table;
     clear: both;
@@ -312,10 +349,9 @@ h1, h2 {
 
 .selection-block {
     float: left;
-    height: 765px;
+    height: 291px;
     width: 1200px;
     text-align: center;  
-    position: relative;
 }
 
 .selection-block span {
@@ -337,19 +373,27 @@ h1, h2 {
     float: left; 
     width: 570px;
     height: 85px;
-    color: #fff;
     font-weight: bold;
     font-size: 21px;  
     margin-left: 315px;
     margin-right: 315px;
     background-color: #766357;  
     text-align: center;
-    padding-top: 10px;    
+    padding-top: 10px; 
+    color: #fff;
+}
+
+.map {
+    background: url("../img/map.jpg");
+    width: 1200px;
+    height: 593px;
+    float: left;
+    position: relative;
 }
 
 .hotel-search {  
     position: absolute;
-    top: 290px;
+    top: 0;
     left: 315px;
     font-weight: bold;
     height: 285px;
@@ -358,14 +402,16 @@ h1, h2 {
     padding-top: 55px;
     padding-bottom: 55px;
     box-shadow: 1px 0px 21px 1px #666666;
+    text-align: center;
 }
 
-.hotel-search input[type="date"] {
+.line-1 input,
+.line-2 input {
     width: 305px;
     padding-right: 40px;
     height: 36px;
     background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    border: none;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 26px;
@@ -373,6 +419,7 @@ h1, h2 {
     text-transform: uppercase;
     outline: none;
     position: relative;
+    padding-left: 10px;
 }
 
 .hotel-search input.check {
@@ -384,13 +431,13 @@ h1, h2 {
 .hotel-search input.check:hover {
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: 307px -197px;
+    background-position: 307px -154px;
 }
 
 .hotel-search input.check:active {
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: 307px -154px;
+    background-position: 307px -197px;
 }
 
 .hotel-search label {
@@ -400,7 +447,7 @@ h1, h2 {
 .line-3 {
     float: left;
     width: 225px;
-    margin-left: 50px;
+    margin-left: 55px;
 }
 
 .line-3 input[type="text"] {
@@ -424,15 +471,13 @@ h1, h2 {
     background-color: #ebebeb;
 }
 
-.hotel-search input:active {
+.line-1 input:focus,
+.line-2 input:focus {
     background-color: #fff;
     border: 2px solid #e5e5e5;
     outline: none;
-}
-.hotel-search input:focus {
-    background-color: #fff;
-    border: 2px solid #e5e5e5;
-    outline: none;
+    height: 32px;
+    width: 301px;
 }
 
 .grey-btn {
@@ -448,8 +493,8 @@ h1, h2 {
     margin-left: -4px;
     margin-right: -4px;
     cursor: pointer;
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 0;
+    text-align: center;
 }
 
 .grey-btn:hover {
@@ -458,6 +503,16 @@ h1, h2 {
 
 .grey-btn:active {
     color: #81b3d2;
+}
+
+.icon-minus {
+    font-size: 14px;
+    line-height: 26px;    
+}
+
+.icon-plus {
+    font-size: 14px;
+    line-height: 26px;    
 }
 
 .line-4 {
@@ -518,14 +573,19 @@ h1, h2 {
     margin: 0;
     width: 1200px;
     height: 120px;
-    background-color: #fff;
+}
+
+.main-footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 0;
 }
 
 .footcolumn-1 {
-    width: 235px;
+    width: 240px;
     float: left;
-    margin-right: 88px;
-    margin-left: 76px;
+    margin-right: 87px;
+    margin-left: 73px;
     text-align: center;
     margin-top: 50px;
     font-size: 21px;
@@ -541,55 +601,66 @@ h1, h2 {
 .footcolumn-2 {
     width: 400px;
     height: 50px;
-    margin-right: 88px;
+    margin-right: 87px;
     float: left;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 35px;    
 }
 
 .footcolumn-3 {
-    width: 80px;
-    padding-right: 140px;
-    height: 40px;
-    float: right;
-    margin-right: 73px; 
+    float: left;
+    width: 240px;
+    height: 40px;    
+    margin-right: 73px;
     text-align: center;
     margin-top: 40px;
     position: relative;
-    font-size: 0;
 }
 
-.footcolumn-3 p {
-    margin: 0;
-    margin-top: 10px;
-    font-size: 14px;
-    line-height: 26px;
-}
-
-.footcolumn-3 p::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: 20px;
+.footcolumn-3 .academylogo {
+    display: block;
+    width: 114px;
+    height: 40px;
     background-image: url("../img/sprite-2.png");
     background-repeat: no-repeat;
     background-position: -10px -10px;
+    position: absolute;
+    top: 0;
+    left: 97px;
+}
+
+.footcolumn-3 .academylogo:hover {
+    display: block;
     width: 114px;
     height: 40px;
-}
-
-.footcolumn-3 p:hover::after {
     background-image: url("../img/sprite-2.png");
     background-repeat: no-repeat;
-    background-position: -10px -69px;    
+    background-position: -10px -69px;
+    position: absolute;
+    top: 0;
+    left: 97px;
 }
 
-.footcolumn-3 p:active::after {
+.footcolumn-3 .academylogo:active {
+    display: block;
+    width: 114px;
+    height: 40px;
     background-image: url("../img/sprite-2.png");
     background-repeat: no-repeat;
-    background-position: -10px -128px;    
+    background-position: -10px -128px;
+    position: absolute;
+    top: 0;
+    left: 97px;
 }
 
+.footcolumn-3 span {
+    display: block;
+    width: 75px;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 15px;
+    margin-top: 7px;
+}
 
 .social-btn {
     width: 46px;
@@ -617,8 +688,7 @@ h1, h2 {
 .social-btn-tw:active {  
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: 5px -691px;   
-   
+    background-position: 5px -691px;      
 }
 
 .social-btn-fb {
@@ -811,27 +881,30 @@ input[type="checkbox"] + label {
 }
 
 input[type="checkbox"] + label::before {
-    content: "";
+    content: "\2610";
+    font-family: "symbols-sedona";
     position: absolute;
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
     width: 22px;
     height: 22px;
-    background-position: -10px -451px;
     top: 0;
     left: 0;
+    font-size: 26px;
 }
 
-input[type="checkbox"]:checked + label::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    width: 26px;
-    height: 22px;
-    background-position: -10px -289px;
-    top: 0;
-    left: 0;
+input[type="checkbox"]:checked + label::before {
+    content: "\2611";
+}
+
+input[type="checkbox"]:disabled + label::before {
+   content: "\2610";
+   color: #6a6a6a;
+   font-weight: bold;
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+    content: "\2611";
+    color: #6a6a6a;
+    font-weight: bold;
 }
 
 .results {
@@ -910,31 +983,76 @@ input[type="checkbox"]:checked + label::after {
 .range-buttons {
     float: right;
     width: 48px;
-    height: 30px;
+    height: 25px;
     margin-right: 73px;
+    margin-top: 5px;
     font-size: 0;
     position: relative;
 }
 
 .range-btn {
     width: 24px;
-    height: 22px;
+    height: 25px;
     display: inline-block;
     vertical-align: middle;
     margin-left: 5;
     position: absolute;
 }
 
-.triangle-2 {
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    background-position: 1px -274px;   
-}
-
 .triangle-1 {
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    background-position: -13px -302px;        
+    background-position: 3px -574px; 
+    top: 0;
+    left: 24px;
+}
+
+.triangle-1:hover {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 3px -484px; 
+    top: 0;
+    left: 24px;
+}
+
+.triangle-1:active {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 3px -604px; 
+    top: 0;
+    left: 24px;
+}
+
+.triangle-1.active {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 3px -604px; 
+    top: 0;
+    left: 24px;
+}
+
+.triangle-2 {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 4px -634px; 
+    top: 0;
+    left: 0;
+}
+
+.triangle-2:hover {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 4px -513px;  
+    top: 0;
+    left: 0;
+}
+
+.triangle-2:active {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 4px -543px;
+    top: 0;
+    left: 0;
 }
 
 .hotels {
