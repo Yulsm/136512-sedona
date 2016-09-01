@@ -377,9 +377,12 @@ h1, h2 {
     margin-right: 315px;
     background-color: #766357;  
     text-align: center;
-    padding-top: 10px; 
+    padding-top: 30px; 
+}
+
+.choice-block a {
+    text-decoration: none;
     color: #fff;
-    cursor: pointer;
 }
 
 .map {
