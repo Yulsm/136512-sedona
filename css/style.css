@@ -54,10 +54,6 @@ h1, h2 {
     line-height: 26px;
 }
 
-.feature-block {
-    color: #fff;
-}
-
 .clearfix::after {
     content: "";
     display: table;
@@ -76,7 +72,7 @@ h1, h2 {
 .main-header {
     position: relative;
     width: 1200px;
-    height: 56px;
+    min-height: 56px;
     background-color: #fff;   
 }
 
@@ -84,6 +80,8 @@ h1, h2 {
     position: absolute;
     top: 0;
     left: 530px;
+    width: 138px;
+    height: 70px;
 }
 
 .main-menu {
@@ -186,6 +184,7 @@ h1, h2 {
     margin: 0;
     background-color: #81b3d2;
     text-align: center;
+    color: #fff;
 }
 
 .feature-image {
@@ -450,7 +449,7 @@ h1, h2 {
 .line-3 {
     float: left;
     width: 225px;
-    margin-left: 55px;
+    margin-left: 50px;
 }
 
 .line-3 input[type="text"] {
@@ -537,14 +536,13 @@ h1, h2 {
     display: inline-block;
     color: #fff;
     text-align: center;
-    display: inline-block;
     margin-left: -4px;
     font-size: 14px;
     line-height: 26px;
     vertical-align: top;
 }
 
-.hotel-search .btn {
+form .btn {
     border: none;
     outline: none;
     background-color: #81b3d2;
@@ -788,7 +786,7 @@ h1, h2 {
 
 .price-controls label{
     display: inline-block;
-    line-height: 38px;
+    line-height: 28px;
     font-size: 14px;
     vertical-align: top;
     cursor: pointer;
@@ -1187,13 +1185,47 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .modal-content-show {
     display: block;
-    animation: appear 0.8s;
+    -webkit-animation: appear 0.8s;
+            animation: appear 0.8s;
+}
+
+@-webkit-keyframes appear {
+    0% {
+        -webkit-transform: translateY(-130px);
+                transform: translateY(-130px);
+    }
+    100% {-webkit-transform: translateY(0);transform: translateY(0);
+    }
 }
 
 @keyframes appear {
     0% {
-        transform: translateY(-130px);
+        -webkit-transform: translateY(-130px);
+                transform: translateY(-130px);
     }
-    100% {transform: translateY(0);
+    100% {-webkit-transform: translateY(0);transform: translateY(0);
     }
+}
+
+.hotel-search-form {  
+    position: absolute;
+    top: 50px;
+    left: 315px;
+    font-weight: bold;
+    height: 285px;
+    width: 570px;
+    background-color: #fff;    
+    padding-top: 55px;
+    padding-bottom: 55px;
+    box-shadow: 1px 0px 21px 1px #666666;
+    text-align: center;
+}
+
+.hotel-search-form .adult {
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.hotel-search-form .kids {
+    margin-left: -20px;
 }

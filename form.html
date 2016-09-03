@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Выбор отеля в Седоне</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
+        <link rel="stylesheet" href="css/normalize.css"> 
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+         <div class="container clearfix">
+            <header class="main-header">
+                <nav class="main-menu">
+                    <ul class="nav-list">
+                        <li class="nav-left">
+                            <a class="nav-link" href="#">Информация</a> 
+                        </li>
+                        <li class="nav-left">
+                            <a class="nav-link" href="#">Фото и видео</a>
+                        </li>
+                        <li class="nav-right">
+                            <a class="nav-link" href="#">Карта штата</a> 
+                        </li>
+                        <li class="nav-right">
+                            <a class="nav-link active" href="#">Гостиницы</a> 
+                        </li>             
+                    </ul>  
+                </nav>
+                <div class="logo">
+                    <a href="index.html" class="logo-link"><img src="img/sedona-logo.png" alt="Logo"></a> 
+                </div>
+            </header>
+            <main>
+                <div class="map">
+                     <form method="get" action="#" name="hotel-search" class="hotel-search-form">
+                        <div class="line-1">
+                            <label for="check-in">Дата заезда:</label>
+                            <input class="check" type="text" name="check-in" id="check-in" placeholder="24 апреля 2016">
+                            <div class="calendar"></div>
+                        </div>
+                        <div class="line-2">
+                            <label for="check-out">Дата выезда:</label>
+                            <input class="check" type="text" name="check-out" id="check-out" placeholder="4 июля 2016">
+                        </div>
+                        <div class="line-3">
+                            <label for="adult" class="adult">Взрослые:</label>
+                            <button type="button" class="grey-btn icon-minus"></button>
+                            <input type="text" name="adult" id="adult" placeholder="2">
+                            <button type="button" class="grey-btn icon-plus"></button>
+                        </div>
+                        <div class="line-4">
+                            <label for="kids" class="kids">Дети:</label>
+                            <button type="button" class="grey-btn icon-minus"></button>
+                            <input type="text" name="kids" id="kids" placeholder="0">
+                            <button type="button" class="grey-btn icon-plus"></button>
+                        </div>
+                        <button class="btn" type="submit">Найти</button>
+                    </form>
+                </div>
+            </main>
+            <footer class="page-footer">
+                <div class="footcolumn-1">
+                    <a href="#">#visitsedona</a> 
+                </div>
+                <div class="footcolumn-2">
+                    <a class="social-btn social-btn-tw" href="#"> </a>
+                    <a class="social-btn social-btn-fb" href="#"></a>
+                    <a class="social-btn social-btn-yt" href="#"></a>
+                </div>
+                 <div class="footcolumn-3">
+                    <span>Website by</span> 
+                    <a href="https://htmlacademy.ru" class="academylogo"></a>
+                </div>
+            </footer>
+        </div>     
+    </body>
+</html>    

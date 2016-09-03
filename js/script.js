@@ -1,6 +1,7 @@
 var button = document.querySelector(".choice-block");
 var close = document.querySelector(".btn");   
 var popup = document.querySelector(".hotel-search");
+var checkin = popup.querySelector("[name=check-in]");
             
     button.addEventListener("click", function(event) {
         event.preventDefault();
